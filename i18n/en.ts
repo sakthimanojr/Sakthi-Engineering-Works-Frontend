@@ -1,0 +1,111 @@
+/** English UI text. Edit freely. Tamil equivalents live in ./ta.ts (same keys). */
+export const en = {
+  nav: { home: "Home", about: "About", services: "Services", projects: "Projects", facilities: "Facilities", gallery: "Gallery", contact: "Contact" },
+  cta: {
+    quote: "Get a Quote", requestQuote: "Request a Quote", whatsapp: "WhatsApp Us", viewWork: "View Our Work", call: "Call", email: "Email",
+    discuss: "Discuss Your Project", explore: "Explore Our Services", sendDetails: "Send Project Details", talk: "Talk to Our Team",
+    directions: "Get Directions", viewAll: "View All", viewDetails: "View Details", enquireService: "Enquire About This Service",
+    callUs: "Call Sakthi Engineering Works", menu: "Open menu", close: "Close", skip: "Skip to content", language: "Language", mobileBar: "Quick contact",
+  },
+  hero: {
+    title: "Complete Steel & Metal Fabrication Solutions",
+    text: "Structural sheds, PEB buildings, sheet bending and shearing, and custom fabrication — engineered and fabricated for industrial, commercial and project requirements.",
+    imageAlt: "Structural steel and PEB fabrication by Sakthi Engineering Works",
+  },
+  strip: { since: "SINCE 2005", field: "FABRICATION & ENGINEERING", area: "ALL OVER INDIA" },
+  about: {
+    eyebrow: "About Us",
+    title: "Fabrication Experience Built Since 2005",
+    p1: "Sakthi Engineering Works is a fabrication and engineering company based in Walajapet, Ranipet, Tamil Nadu. Since 2005 we have provided fabrication and structural solutions to customers across India.",
+    p2: "Our office is on Sholinghur Road and our factory is at Anandhalai, both in Walajapet. From the factory we handle structural steel work, sheet bending and shearing, gates, grills, staircases, container bodies, stainless-steel works and custom fabrication.",
+    p3: "Every job is fabricated to the customer's requirement and drawing. Tell us what you need and our team will discuss the best way to build it.",
+    imageAlt: "Sakthi Engineering Works fabrication facility at Walajapet",
+    leadership: "Leadership",
+    owner: "Owner",
+    md: "Managing Director",
+  },
+  services: {
+    eyebrow: "What We Fabricate", title: "Our Fabrication Services",
+    intro: "Fourteen service categories covering structural steel, sheet work, doors, gates, stairs, bodies and general fabrication.",
+    featuredEyebrow: "Core Capabilities", featuredTitle: "Sheet Work, Sheds and PEB",
+    includedWork: "Included Work", applications: "Applications", related: "Other Services",
+    ctaTitle: "Need this fabricated?", ctaText: "Send us your requirement, drawing or site details and our team will get back to you.",
+    allServices: "All Services", heroAltSuffix: "by Sakthi Engineering Works",
+  },
+  capability: {
+    eyebrow: "Industrial Capability", title: "Cut, Bend, Weld and Erect — Under One Roof",
+    intro: "Our Walajapet factory is equipped with the machinery to take a job from raw steel to finished structure.",
+    items: [
+      { title: "Cutting & Shearing", text: "Shearing, cutting machines and gas cutting for sheet, plate and sections." },
+      { title: "Bending & Forming", text: "Press brake and sheet bending machinery for formed components." },
+      { title: "Welding & Fabrication", text: "MIG and arc welding for structural and sheet fabrication." },
+      { title: "Lifting & Handling", text: "EOT crane and lifting equipment for handling heavy fabrication material." },
+    ],
+  },
+  projects: {
+    eyebrow: "Our Work", title: "Projects", intro: "Real project photographs and details will be published here. Until then, the entries below are placeholders.",
+    badge: "PROJECT DETAILS TO BE UPDATED", comingSoon: "Project information coming soon", location: "Location", category: "Category", back: "Back to projects", toBeUpdated: "To be updated",
+    placeholderNotice: "These are placeholder records. No project information has been published yet.",
+  },
+  machinery: { eyebrow: "Facilities", title: "Machinery & Facilities", intro: "Machinery and facilities at our factory in Walajapet." },
+  industries: { eyebrow: "Applications", title: "Project Types We Fabricate For", intro: "From industrial sheds to custom machinery structures." },
+  why: {
+    eyebrow: "Why Choose Us", title: "Why Work With Sakthi Engineering Works",
+    items: [
+      { title: "Established in 2005", text: "Fabrication and engineering work carried out since 2005." },
+      { title: "Own Factory", text: "Fabrication at our factory in Anandhalai, Walajapet." },
+      { title: "Wide Range of Work", text: "Fourteen categories, from structural sheds to stainless-steel works." },
+      { title: "Made to Your Requirement", text: "Custom fabrication to your drawing, size and use." },
+      { title: "Service Across India", text: "We take up work all over India." },
+      { title: "Direct Communication", text: "Talk to our team by phone, WhatsApp or email." },
+    ],
+  },
+  testimonials: { title: "Customer Testimonials", text: "Customer testimonials will be added here." },
+  gallery: {
+    eyebrow: "Gallery", title: "Photo Gallery", intro: "Photographs of our factory, machinery and fabrication work.",
+    all: "All", empty: "Gallery photos will be added soon.", close: "Close", next: "Next photo", prev: "Previous photo", fullscreen: "Toggle fullscreen",
+    preview: "Gallery preview", open: "Open photo", placeholderNote: "Placeholder images are shown until real photographs are added.",
+  },
+  enquiry: { eyebrow: "Enquiry", title: "Discuss Your Project", text: "Share your requirement and our team will contact you." },
+  locations: { eyebrow: "Visit Us", title: "Office & Factory", office: "Office", factory: "Factory" },
+  contact: {
+    eyebrow: "Contact", title: "Talk to Our Team", intro: "Call, WhatsApp, email or send an enquiry. We serve customers all over India.",
+    details: "Contact Details", phone: "Phone", whatsapp: "WhatsApp", email: "Email", serviceArea: "Service Area", formTitle: "Send a Message",
+  },
+  quote: { eyebrow: "Quotation", title: "Request a Quote", intro: "Use the quick form for a simple enquiry, or send full project details.", quick: "Quick Enquiry", project: "Project Enquiry" },
+  forms: {
+    labels: {
+      name: "Name", mobile: "Mobile", email: "Email", service: "Service", message: "Message", company: "Company", whatsapp: "WhatsApp",
+      location: "Project Location", description: "Project Description", dimensions: "Approximate Dimensions", material: "Material Requirement",
+      quantity: "Quantity", additional: "Additional Requirements", file: "Attach drawing / photo",
+    },
+    optional: "optional", selectService: "Select a service", otherService: "Other / Not sure",
+    fileHelp: "PDF, JPG, JPEG, PNG or WEBP, up to 4 MB.",
+    submit: "Send Enquiry", sendProject: "Send Project Details", submitting: "Sending your enquiry…",
+    successTitle: "Thank you. We have received your enquiry.", successText: "Our team will contact you shortly. You can also reach us directly on WhatsApp.",
+    demoText: "Demo mode: the enquiry was validated but not stored because the database is not configured yet.",
+    successWhatsapp: "Continue on WhatsApp", another: "Send another enquiry",
+    serverError: "We could not send your enquiry right now. Please try again, or call or WhatsApp us.",
+    networkError: "Network problem. Please check your connection and try again.",
+    tooMany: "Too many attempts. Please wait a few minutes and try again.",
+    errors: {
+      required: "This field is required.", invalid_mobile: "Enter a valid 10-digit Indian mobile number.", invalid_email: "Enter a valid email address.",
+      too_long: "This is too long.", file_type: "Only PDF, JPG, PNG or WEBP files are allowed.", file_size: "File is larger than 4 MB.",
+    },
+  },
+  footer: {
+    about: "Fabrication and engineering company in Walajapet, Ranipet, Tamil Nadu. Serving customers all over India.",
+    quickLinks: "Quick Links", services: "Services", office: "Office", factory: "Factory", contact: "Contact", follow: "Follow Us",
+    privacy: "Privacy Policy", terms: "Terms & Conditions", rights: "All rights reserved.",
+  },
+  facilities: {
+    eyebrow: "Facilities", title: "Factory & Machinery", intro: "Our factory at Anandhalai, Walajapet houses the machinery used for cutting, bending, welding, drilling, grinding, milling and lifting.",
+    factoryTitle: "Our Factory", factoryText: "Fabrication work is carried out at our factory opposite the Post Office in Anandhalai, Walajapet. Our office is on Sholinghur Road, Walajapet.",
+    imageAlt: "Fabrication machinery at the Sakthi Engineering Works factory",
+  },
+  notFound: { title: "Page not found", text: "The page you are looking for does not exist or has moved.", home: "Back to Home" },
+  errorPage: { title: "Something went wrong", text: "Please try again. If the problem continues, call or WhatsApp us.", retry: "Try again" },
+  breadcrumbs: { label: "Breadcrumb" },
+};
+
+export type Dict = typeof en;

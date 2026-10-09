@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { @apply bg-white font-sans text-base text-steel antialiased; }
+  h1, h2, h3, h4 { @apply font-display tracking-tight; }
+  :focus-visible { outline: 3px solid #FF851B; outline-offset: 2px; }
+}
+
+@layer components {
+  /* Engineering grid backdrop */
+  .grid-bg-dark {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .grid-bg-light {
+    background-image:
+      linear-gradient(rgba(17,19,21,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17,19,21,0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .steel-texture {
+    background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 6px);
+  }
+  /* Technical corner brackets */
+  .bracket { position: relative; }
+  .bracket::before, .bracket::after {
+    content: ""; position: absolute; width: 22px; height: 22px; border: 2px solid #FF851B; pointer-events: none;
+  }
+  .bracket::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+  .bracket::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+  /* Measurement line */
+  .measure {
+    height: 10px; background:
+      linear-gradient(90deg, currentColor 1px, transparent 1px) 0 0 / 12px 100%,
+      linear-gradient(currentColor, currentColor) 0 50% / 100% 1px no-repeat;
+    opacity: 0.35;
+  }
+  .field { @apply w-full rounded-sm border border-steel/30 bg-white px-3.5 py-3 text-base text-ink placeholder:text-steel/60; }
+  .field[aria-invalid="true"] { @apply border-red-600; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+  .reveal.is-visible { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  .spinner { width: 1.1rem; height: 1.1rem; border-radius: 9999px; border: 2px solid currentColor; border-right-color: transparent; animation: spin .7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .skeleton { @apply animate-pulse rounded-sm bg-steel/15; }
+}
