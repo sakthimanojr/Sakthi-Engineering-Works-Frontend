@@ -5,8 +5,8 @@
 export const site = {
   name: "Sakthi Engineering Works",
   since: 2005,
-  domain: "sakthiengineeringworks.in",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://sakthiengineeringworks.in",
+  domain: "sakthi-engineering-works-frontend.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://sakthi-engineering-works-frontend.vercel.app",
   // Temporary descriptor – NOT an official tagline. Replace via NEXT_PUBLIC_DESCRIPTOR.
   descriptor: process.env.NEXT_PUBLIC_DESCRIPTOR || "Fabrication • Engineering • Structures",
   owner: "Ramamoorthy Varadharaj",
