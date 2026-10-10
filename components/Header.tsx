@@ -28,9 +28,7 @@ export default function Header({ logoSrc, name }: { logoSrc: string | null; name
     { href: "/", label: t.nav.home },
     { href: "/about", label: t.nav.about },
     { href: "/services", label: t.nav.services },
-    { href: "/projects", label: t.nav.projects },
     { href: "/facilities", label: t.nav.facilities },
-    { href: "/gallery", label: t.nav.gallery },
     { href: "/contact", label: t.nav.contact },
   ];
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));

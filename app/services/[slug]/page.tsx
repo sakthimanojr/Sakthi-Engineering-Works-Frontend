@@ -83,7 +83,15 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
         </Container>
       </section>
       {photos.length > 0 && (
-        <section className="bg-mist py-16"><Container><SectionHeading eyebrow={t.gallery.eyebrow} title={t.gallery.title} /><div className="mt-8"><GalleryGrid items={photos} limit={6} /></div></Container></section>
+        <section className="bg-mist py-12 sm:py-16">
+          <Container>
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <SectionHeading eyebrow={t.gallery.eyebrow} title={t.gallery.title} />
+              <ButtonLink href="/services#all-works" variant="outlineDark">{t.cta.allWorks}</ButtonLink>
+            </div>
+            <div className="mt-8"><GalleryGrid items={photos} limit={6} /></div>
+          </Container>
+        </section>
       )}
       <section className="bg-mist py-16">
         <Container>

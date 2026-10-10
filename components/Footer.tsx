@@ -24,7 +24,7 @@ export default async function Footer() {
         <nav aria-label={t.footer.quickLinks}>
           <h2 className={h}>{t.footer.quickLinks}</h2>
           <ul className="mt-4 space-y-2">
-            {[["/", t.nav.home], ["/about", t.nav.about], ["/services", t.nav.services], ["/projects", t.nav.projects], ["/facilities", t.nav.facilities], ["/gallery", t.nav.gallery], ["/contact", t.nav.contact], ["/quote", t.cta.quote]].map(([href, label]) => (
+            {[["/", t.nav.home], ["/about", t.nav.about], ["/services", t.nav.services], ["/facilities", t.nav.facilities], ["/contact", t.nav.contact], ["/quote", t.cta.quote]].map(([href, label]) => (
               <li key={href}><Link href={href} className={a}>{label}</Link></li>
             ))}
           </ul>

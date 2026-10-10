@@ -4,7 +4,7 @@ export const en = {
   cta: {
     quote: "Get a Quote", requestQuote: "Request a Quote", whatsapp: "WhatsApp Us", viewWork: "View Our Work", call: "Call", email: "Email",
     discuss: "Discuss Your Project", explore: "Explore Our Services", sendDetails: "Send Project Details", talk: "Talk to Our Team",
-    directions: "Get Directions", viewAll: "View All", viewDetails: "View Details", enquireService: "Enquire About This Service",
+    directions: "Get Directions", viewAll: "View All", viewDetails: "View Details", enquireService: "Enquire About This Service", allWorks: "All Works",
     callUs: "Call Sakthi Engineering Works", menu: "Open menu", close: "Close", skip: "Skip to content", language: "Language", mobileBar: "Quick contact",
   },
   hero: {
