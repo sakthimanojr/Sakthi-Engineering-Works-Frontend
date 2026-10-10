@@ -66,21 +66,14 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {/* Featured services (light) */}
+      {/* Services — featured + full grid combined */}
       <section className="bg-mist py-20 sm:py-28">
         <Container>
-          <SectionHeading number="02" eyebrow={t.services.featuredEyebrow} title={t.services.featuredTitle} />
+          <SectionHeading number="02" eyebrow={t.services.eyebrow} title={t.services.title} intro={t.services.intro} />
           <ul className="mt-12 grid gap-6 lg:grid-cols-3">
             {featured.map((s) => (<li key={s.slug}><Reveal className="h-full"><FeaturedService service={s} lang={lang} cta={t.cta.viewDetails} /></Reveal></li>))}
           </ul>
-        </Container>
-      </section>
-
-      {/* All services (light) */}
-      <section className="bg-white py-20 sm:py-28">
-        <Container>
-          <SectionHeading number="03" eyebrow={t.services.eyebrow} title={t.services.title} intro={t.services.intro} />
-          <div className="mt-12"><ServiceGrid lang={lang} cta={t.cta.viewDetails} /></div>
+          <div className="mt-10"><ServiceGrid lang={lang} cta={t.cta.viewDetails} /></div>
         </Container>
       </section>
 
@@ -88,7 +81,7 @@ export default async function HomePage() {
       <section className="steel-texture relative bg-ink py-20 text-white sm:py-28">
         <div aria-hidden className="grid-bg-dark absolute inset-0" />
         <Container className="relative">
-          <SectionHeading dark number="04" eyebrow={t.capability.eyebrow} title={t.capability.title} intro={t.capability.intro} />
+          <SectionHeading dark number="03" eyebrow={t.capability.eyebrow} title={t.capability.title} intro={t.capability.intro} />
           <ul className="mt-12 grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
             {t.capability.items.map((c, i) => (
               <li key={c.title} className="bg-ink p-7">
@@ -105,7 +98,7 @@ export default async function HomePage() {
       <section className="bg-coal py-20 text-white sm:py-28">
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHeading dark number="05" eyebrow={t.projects.eyebrow} title={t.projects.title} intro={t.projects.intro} />
+            <SectionHeading dark number="04" eyebrow={t.projects.eyebrow} title={t.projects.title} intro={t.projects.intro} />
             <ButtonLink href="/projects" variant="outline">{t.cta.viewAll}</ButtonLink>
           </div>
           <div className="mt-12"><ProjectGrid projects={projects} lang={lang} t={t} /></div>
@@ -115,7 +108,7 @@ export default async function HomePage() {
       {/* Machinery (light) */}
       <section className="bg-mist py-20 sm:py-28">
         <Container>
-          <SectionHeading number="06" eyebrow={t.machinery.eyebrow} title={t.machinery.title} intro={t.machinery.intro} />
+          <SectionHeading number="05" eyebrow={t.machinery.eyebrow} title={t.machinery.title} intro={t.machinery.intro} />
           <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {machinery.map((m, i) => (<li key={m.slug}><Reveal className="h-full"><MachineryCard machine={m} lang={lang} index={i} /></Reveal></li>))}
           </ul>
@@ -125,7 +118,7 @@ export default async function HomePage() {
       {/* Industries (dark) */}
       <section className="bg-ink py-20 text-white sm:py-28">
         <Container>
-          <SectionHeading dark number="07" eyebrow={t.industries.eyebrow} title={t.industries.title} intro={t.industries.intro} />
+          <SectionHeading dark number="06" eyebrow={t.industries.eyebrow} title={t.industries.title} intro={t.industries.intro} />
           <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {projectTypes.map((p) => (<li key={p.slug}><IndustryCard item={p} lang={lang} /></li>))}
           </ul>
@@ -135,7 +128,7 @@ export default async function HomePage() {
       {/* Why choose us (light) */}
       <section className="bg-mist py-20 sm:py-28">
         <Container>
-          <SectionHeading number="08" eyebrow={t.why.eyebrow} title={t.why.title} />
+          <SectionHeading number="07" eyebrow={t.why.eyebrow} title={t.why.title} />
           <div className="mt-12"><WhyChooseUs t={t} /></div>
           <div className="mt-10 border border-dashed border-steel/40 bg-white p-6 text-center">
             <h3 className="font-display text-xl font-bold text-ink">{t.testimonials.title}</h3>
@@ -148,7 +141,7 @@ export default async function HomePage() {
       <section className="bg-white py-20 sm:py-28">
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHeading number="09" eyebrow={t.gallery.eyebrow} title={t.gallery.title} intro={t.gallery.intro} />
+            <SectionHeading number="08" eyebrow={t.gallery.eyebrow} title={t.gallery.title} intro={t.gallery.intro} />
             <ButtonLink href="/gallery" variant="outlineDark">{t.cta.viewAll}</ButtonLink>
           </div>
           <div className="mt-12"><GalleryGrid items={gallery} limit={6} /></div>
@@ -160,7 +153,7 @@ export default async function HomePage() {
         <div aria-hidden className="grid-bg-dark absolute inset-0" />
         <Container className="relative grid gap-12 lg:grid-cols-2">
           <div>
-            <SectionHeading dark number="10" eyebrow={t.enquiry.eyebrow} title={t.enquiry.title} intro={t.enquiry.text} />
+            <SectionHeading dark number="09" eyebrow={t.enquiry.eyebrow} title={t.enquiry.title} intro={t.enquiry.text} />
             <p className="mt-6"><Link href="/quote" className="font-bold text-accent underline underline-offset-4">{t.cta.sendDetails}</Link></p>
           </div>
           <div className="bg-coal p-6 sm:p-8"><QuickEnquiryForm idPrefix="home" dark /></div>
@@ -170,7 +163,7 @@ export default async function HomePage() {
       {/* Office + Factory (dark) */}
       <section className="bg-coal py-20 text-white sm:py-28">
         <Container>
-          <SectionHeading dark number="11" eyebrow={t.locations.eyebrow} title={t.locations.title} />
+          <SectionHeading dark number="10" eyebrow={t.locations.eyebrow} title={t.locations.title} />
           <div className="mt-12 grid gap-6 md:grid-cols-2"><OfficeCard /><FactoryCard /></div>
         </Container>
       </section>
