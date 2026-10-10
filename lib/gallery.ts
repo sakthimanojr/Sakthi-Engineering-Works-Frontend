@@ -9,7 +9,7 @@ async function fromBackend(): Promise<GalleryItem[]> {
   const base = backendUrl();
   if (!base) return [];
   try {
-    const res = await fetch(`${base}/api/public/gallery`, { next: { revalidate: 60 } });
+    const res = await fetch(`${base}/api/public/gallery`, { next: { revalidate: 60 }, signal: AbortSignal.timeout(3000) });
     if (!res.ok) return [];
     const data = (await res.json()) as { images?: { url: string; category: string; alt: string }[] };
     return (data.images ?? []).map((i) => ({ src: i.url, category: i.category, alt: i.alt || undefined, placeholder: false }));

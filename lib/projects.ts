@@ -11,7 +11,7 @@ export async function getProjects(): Promise<ProjectRecord[]> {
   const base = backendUrl();
   if (base) {
     try {
-      const res = await fetch(`${base}/api/public/projects`, { next: { revalidate: 60 } });
+      const res = await fetch(`${base}/api/public/projects`, { next: { revalidate: 60 }, signal: AbortSignal.timeout(3000) });
       if (res.ok) {
         const data = (await res.json()) as { projects?: ApiProject[] };
         if (data.projects?.length) return data.projects.map((p) => ({ ...p, placeholder: false }));
