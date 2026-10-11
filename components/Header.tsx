@@ -30,7 +30,7 @@ export default function Header({ logoSrc, name }: { logoSrc: string | null; name
     { href: "/services", label: t.nav.services },
     { href: "/facilities", label: t.nav.facilities },
     { href: "/contact", label: t.nav.contact },
-  ];
+  ];  // Gallery & Projects pages removed — works are shown via Services
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
