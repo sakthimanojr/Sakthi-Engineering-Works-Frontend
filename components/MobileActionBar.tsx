@@ -6,7 +6,7 @@ import { getI18n } from "@/i18n";
 
 export default async function MobileActionBar() {
   const { t } = await getI18n();
-  const item = "flex min-h-14 flex-1 items-center justify-center gap-2 text-sm font-bold uppercase tracking-wide";
+  const item = "flex min-h-12 flex-1 items-center justify-center gap-1.5 text-xs font-bold uppercase tracking-wide sm:min-h-14 sm:gap-2 sm:text-sm";
   return (
     <nav aria-label={t.cta.mobileBar} className="fixed inset-x-0 bottom-0 z-40 flex border-t border-white/10 bg-ink text-white md:hidden" style={{ paddingBottom: "env(safe-area-inset-bottom)" }}>
       <a href={`tel:${site.phones[0].tel}`} className={item}><Phone aria-hidden size={18} />{t.cta.call}</a>

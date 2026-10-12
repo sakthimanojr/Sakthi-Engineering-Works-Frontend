@@ -34,7 +34,7 @@ export default function MobileMenu({ open, onClose, links }: { open: boolean; on
         <ul className="space-y-1">
           {links.map((l, i) => (
             <li key={l.href}>
-              <Link href={l.href} onClick={onClose} className="flex items-baseline gap-4 border-b border-white/10 py-4 font-display text-3xl font-bold uppercase">
+              <Link href={l.href} onClick={onClose} className="flex items-baseline gap-4 border-b border-white/10 py-3 font-display text-xl font-bold uppercase sm:py-4 sm:text-3xl">
                 <span className="text-base text-accent">{String(i + 1).padStart(2, "0")}</span>
                 {l.label}
               </Link>

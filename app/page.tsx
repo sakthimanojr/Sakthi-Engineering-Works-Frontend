@@ -33,24 +33,15 @@ export default async function HomePage() {
     <>
       <Hero />
 
-      {/* Experience strip — Compact responsive bar */}
+      {/* Experience strip — single compact row */}
       <section aria-label="Since 2005" className="border-y border-ink/10 bg-accent text-ink">
         <Container className="py-2 sm:py-3.5">
-          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-0.5 text-center font-display text-[10px] font-bold uppercase tracking-wider text-ink xs:text-xs sm:text-base lg:text-xl">
-            <span className="flex items-center gap-1.5">
-              <span className="inline-block h-1 w-1 rounded-full bg-ink/70 sm:hidden" />
-              {t.strip.since}
-            </span>
-            <span className="hidden text-ink/40 sm:inline">•</span>
-            <span className="flex items-center gap-1.5">
-              <span className="inline-block h-1 w-1 rounded-full bg-ink/70 sm:hidden" />
-              {t.strip.field}
-            </span>
-            <span className="hidden text-ink/40 sm:inline">•</span>
-            <span className="flex items-center gap-1.5">
-              <span className="inline-block h-1 w-1 rounded-full bg-ink/70 sm:hidden" />
-              {t.strip.area}
-            </span>
+          <div className="flex items-center justify-center gap-x-2 overflow-hidden text-center font-display text-[9px] font-bold uppercase tracking-wide text-ink sm:gap-x-3 sm:text-base lg:text-xl">
+            <span className="shrink-0">{t.strip.since}</span>
+            <span className="shrink-0 text-ink/40">•</span>
+            <span className="shrink truncate">{t.strip.field}</span>
+            <span className="shrink-0 text-ink/40">•</span>
+            <span className="shrink-0">{t.strip.area}</span>
           </div>
         </Container>
       </section>
@@ -92,7 +83,7 @@ export default async function HomePage() {
           <ul className="mt-6 grid gap-px bg-white/10 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
             {t.capability.items.map((c, i) => (
               <li key={c.title} className="bg-ink p-4 sm:p-7">
-                <span className="font-display text-2xl font-bold text-accent sm:text-4xl">{capIcons[i]}</span>
+                <span className="font-display text-xl font-bold text-accent sm:text-4xl">{capIcons[i]}</span>
                 <h3 className="mt-1.5 font-display text-lg font-bold sm:mt-2 sm:text-2xl">{c.title}</h3>
                 <p className="mt-1 text-xs text-mist/80 sm:text-base">{c.text}</p>
               </li>

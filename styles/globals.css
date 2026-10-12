@@ -5,7 +5,7 @@
 @layer base {
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body { @apply bg-white font-sans text-base text-steel antialiased; }
+  body { @apply bg-white font-sans text-sm text-steel antialiased sm:text-base; }
   h1, h2, h3, h4 { @apply font-display tracking-tight; }
   :focus-visible { outline: 3px solid #FF851B; outline-offset: 2px; }
 }

@@ -93,7 +93,7 @@ export default function EnquiryForm({ kind, idPrefix, dark = false }: { kind: En
     const service = services.find((s) => s.slug === summary.service)?.title.en ?? "";
     return (
       <div role="status" className={`bracket border p-6 sm:p-8 ${dark ? "border-white/20 bg-coal text-white" : "border-steel/20 bg-white text-ink"}`}>
-        <h3 className="font-display text-2xl font-bold">{t.forms.successTitle}</h3>
+        <h3 className="font-display text-xl font-bold sm:text-2xl">{t.forms.successTitle}</h3>
         <p className="mt-3">{t.forms.successText}</p>
         {status === "demo" && <p className="mt-3 text-sm opacity-80">{t.forms.demoText}</p>}
         <div className="mt-6 flex flex-wrap gap-3">

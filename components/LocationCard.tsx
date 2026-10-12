@@ -8,10 +8,10 @@ async function LocationCard({ kind }: { kind: "office" | "factory" }) {
   const data = site[kind];
   const href = getMapLinks()[kind];
   return (
-    <article className="bracket flex h-full flex-col border border-white/15 bg-coal p-6 text-white sm:p-8">
+    <article className="bracket flex h-full flex-col border border-white/15 bg-coal p-4 text-white sm:p-8">
       <div className="flex items-center gap-3">
         <MapPin aria-hidden className="text-accent" size={24} />
-        <h3 className="font-display text-2xl font-bold uppercase">{kind === "office" ? t.locations.office : t.locations.factory}</h3>
+        <h3 className="font-display text-lg font-bold uppercase sm:text-2xl">{kind === "office" ? t.locations.office : t.locations.factory}</h3>
       </div>
       <address className="mt-5 flex-1 not-italic leading-relaxed text-mist/90">
         {data.lines.map((line) => (<span key={line} className="block">{line}</span>))}

@@ -12,7 +12,7 @@ export default function ServiceCard({ service, lang, cta }: { service: Service; 
         <span className="absolute left-0 top-0 bg-ink px-2.5 py-1.5 font-display text-base font-bold text-accent sm:px-3 sm:py-2 sm:text-lg">{service.number}</span>
       </div>
       <div className="flex flex-1 flex-col p-4 sm:p-6">
-        <h3 className="font-display text-xl font-bold text-ink sm:text-2xl">
+        <h3 className="font-display text-base font-bold text-ink sm:text-xl">
           <Link href={`/services/${service.slug}`} className="after:absolute after:inset-0">{service.title[lang]}</Link>
         </h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-steel sm:mt-3">{service.short[lang]}</p>

@@ -7,9 +7,9 @@ export default function WhyChooseUs({ t }: { t: Dict }) {
       {t.why.items.map((item, i) => (
         <li key={item.title}>
           <Reveal delay={(i % 3) * 80} className="h-full">
-            <div className="h-full border-l-4 border-accent bg-white p-6 shadow-sm">
+            <div className="h-full border-l-4 border-accent bg-white p-4 shadow-sm sm:p-6">
               <span className="font-display text-sm font-bold text-accent-deep">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="mt-1 font-display text-2xl font-bold text-ink">{item.title}</h3>
+              <h3 className="mt-1 font-display text-lg font-bold text-ink sm:text-2xl">{item.title}</h3>
               <p className="mt-2 text-steel">{item.text}</p>
             </div>
           </Reveal>
