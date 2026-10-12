@@ -17,6 +17,7 @@ import { services } from "@/data/services";
 import { machinery, projectTypes } from "@/data/machinery";
 import { getI18n } from "@/i18n";
 import { pageMetadata } from "@/lib/seo";
+import { getServiceCovers } from "@/lib/covers";
 
 export const metadata: Metadata = pageMetadata({
   title: "Steel Fabrication Company in Walajapet, Ranipet | Sakthi Engineering Works",
@@ -28,6 +29,7 @@ export default async function HomePage() {
   const { t, lang } = await getI18n();
   const featured = services.filter((s) => s.featured);
   const capIcons = ["01", "02", "03", "04"];
+  const covers = await getServiceCovers();
 
   return (
     <>
@@ -69,7 +71,7 @@ export default async function HomePage() {
         <Container>
           <SectionHeading number="02" eyebrow={t.services.eyebrow} title={t.services.title} intro={t.services.intro} />
           <ul className="mt-6 grid gap-3 sm:mt-8 sm:gap-6 lg:grid-cols-3">
-            {featured.map((s) => (<li key={s.slug}><Reveal className="h-full"><FeaturedService service={s} lang={lang} cta={t.cta.viewDetails} /></Reveal></li>))}
+            {featured.map((s) => (<li key={s.slug}><Reveal className="h-full"><FeaturedService service={s} lang={lang} cta={t.cta.viewDetails} coverUrl={covers.get(s.slug)?.url} /></Reveal></li>))}
           </ul>
           <div className="mt-6 sm:mt-10"><ServiceGrid lang={lang} cta={t.cta.viewDetails} /></div>
         </Container>

@@ -14,7 +14,7 @@ export default async function Footer() {
   return (
     <footer className="bg-ink pb-20 text-mist md:pb-0">
       <div aria-hidden className="h-1 bg-accent" />
-      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+      <Container className="grid gap-8 py-8 sm:grid-cols-2 sm:py-14 lg:grid-cols-4">
         <div>
           <p className="font-display text-lg font-bold uppercase text-white sm:text-2xl">{site.name}</p>
           <p className="mt-1 font-semibold text-accent">{lang === "ta" ? `${site.since} முதல்` : `Since ${site.since}`}</p>
@@ -65,7 +65,7 @@ export default async function Footer() {
         </div>
       </Container>
       <div className="border-t border-white/10">
-        <Container className="flex flex-col gap-3 py-6 text-sm text-mist/70 sm:flex-row sm:items-center sm:justify-between">
+        <Container className="flex flex-col gap-2 py-5 text-xs text-mist/70 sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:py-6 sm:text-sm">
           <p>© {new Date().getFullYear()} {site.name}. {t.footer.rights}</p>
           <ul className="flex flex-wrap gap-5 items-center">
             <li><Link href="/privacy" className="hover:text-accent">{t.footer.privacy}</Link></li>

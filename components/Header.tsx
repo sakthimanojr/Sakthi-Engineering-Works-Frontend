@@ -44,7 +44,7 @@ export default function Header({ logoSrc, name }: { logoSrc: string | null; name
             ) : (
               <span className="flex items-center gap-3">
                 <span aria-hidden className="flex h-10 w-10 items-center justify-center border-2 border-accent font-display text-xl font-bold text-accent">S</span>
-                <span className="font-display text-lg font-bold uppercase leading-none tracking-wide sm:text-xl">
+                <span className="font-display text-base font-bold uppercase leading-none tracking-wide">
                   Sakthi<span className="block text-xs font-semibold tracking-[0.2em] text-mist/80">Engineering Works</span>
                 </span>
               </span>
@@ -65,7 +65,7 @@ export default function Header({ logoSrc, name }: { logoSrc: string | null; name
 
           <div className="flex items-center gap-2 sm:gap-4">
             <LanguageSwitcher />
-            <Link href="/quote" className="hidden min-h-11 items-center bg-accent px-5 text-sm font-bold uppercase tracking-wider text-ink hover:bg-white sm:inline-flex">{t.cta.quote}</Link>
+            <Link href="/quote" className="hidden min-h-10 items-center bg-accent px-4 text-xs font-bold uppercase tracking-wider text-ink hover:bg-white md:inline-flex sm:min-h-11 sm:px-5 sm:text-sm">{t.cta.quote}</Link>
             <button type="button" onClick={() => setOpen(true)} aria-label={t.cta.menu} aria-expanded={open} className="flex h-11 w-11 items-center justify-center border border-white/40 text-white lg:hidden">
               <Menu aria-hidden size={22} />
             </button>

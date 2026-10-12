@@ -13,6 +13,7 @@ import JsonLd from "@/components/JsonLd";
 import { getService, services } from "@/data/services";
 import { getI18n } from "@/i18n";
 import { getGalleryItems } from "@/lib/gallery";
+import { getServiceCovers } from "@/lib/covers";
 import { pageMetadata, serviceJsonLd } from "@/lib/seo";
 
 type Params = { slug: string };
@@ -25,11 +26,13 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const { slug } = await params;
   const s = getService(slug);
   if (!s) return {};
+  const covers = await getServiceCovers();
+  const coverUrl = covers.get(s.slug)?.url;
   return pageMetadata({
     title: `${s.title.en} in Walajapet, Ranipet – Sakthi Engineering Works`,
     description: `${s.short.en} Fabricated by Sakthi Engineering Works, Walajapet, Ranipet, Tamil Nadu. Service across India.`,
     path: `/services/${s.slug}`,
-    image: s.image,
+    image: coverUrl || s.image,
   });
 }
 
@@ -57,11 +60,13 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
   if (!service) notFound();
   const { t, lang } = await getI18n();
   const cats = galleryMap[service.slug] ?? [];
-  const allGallery = await getGalleryItems();
+  const [allGallery, covers] = await Promise.all([getGalleryItems(), getServiceCovers()]);
+  const coverUrl = covers.get(service.slug)?.url;
+  const coverAlt = covers.get(service.slug)?.alt;
   const matched = allGallery.filter((g) => cats.includes(g.category));
   const photos = matched.length > 0
     ? matched
-    : [{ src: service.image, category: service.slug, placeholder: false, alt: `${service.title[lang]} — Sakthi Engineering Works` }];
+    : [{ src: coverUrl || service.image, category: service.slug, placeholder: false, alt: coverAlt || `${service.title[lang]} — Sakthi Engineering Works` }];
   const others = services.filter((s) => s.slug !== service.slug).slice(0, 3);
   const path = `/services/${service.slug}`;
 
@@ -70,7 +75,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       <PageHero
         title={service.title[lang]} eyebrow={`${service.number} — ${t.nav.services}`} intro={service.short[lang]}
         crumbs={[{ name: t.nav.home, path: "/" }, { name: t.nav.services, path: "/services" }, { name: service.title[lang], path }]}
-        crumbLabel={t.breadcrumbs.label} image={service.image} imageAlt={`${service.title.en} ${t.services.heroAltSuffix}`}
+        crumbLabel={t.breadcrumbs.label} image={coverUrl || service.image} imageAlt={coverAlt || `${service.title.en} ${t.services.heroAltSuffix}`}
       />
       <section className="bg-white py-10 sm:py-20">
         <Container className="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
@@ -88,7 +93,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
             </ul>
           </div>
           <aside className="space-y-4 sm:space-y-6">
-            <div className="bracket relative aspect-[4/3] bg-ink"><Image src={service.image} alt={`${service.title.en} — Sakthi Engineering Works`} fill sizes="(min-width:1024px) 40vw, 100vw" className="object-cover" /></div>
+            <div className="bracket relative aspect-[4/3] bg-ink"><Image src={coverUrl || service.image} alt={coverAlt || `${service.title.en} — Sakthi Engineering Works`} fill sizes="(min-width:1024px) 40vw, 100vw" className="object-cover" /></div>
             <div className="bg-ink p-4 text-white sm:p-6">
               <h2 className="font-display text-xl font-bold sm:text-2xl">{t.services.ctaTitle}</h2>
               <p className="mt-1.5 text-sm text-mist/80 sm:mt-2 sm:text-base">{t.services.ctaText}</p>

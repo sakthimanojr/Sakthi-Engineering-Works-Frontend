@@ -4,9 +4,9 @@ import type { Lang } from "@/types";
 
 export default function IndustryCard({ item, lang }: { item: ProjectType; lang: Lang }) {
   return (
-    <div className="flex items-center gap-4 border border-white/15 bg-coal p-5 text-white">
-      <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-accent text-accent"><Icon name={item.icon} size={24} /></span>
-      <span className="font-display text-xl font-semibold leading-tight">{item.name[lang]}</span>
+    <div className="flex items-center gap-3 border border-white/15 bg-coal p-3 text-white sm:gap-4 sm:p-5">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-accent text-accent sm:h-12 sm:w-12"><Icon name={item.icon} size={20} /></span>
+      <span className="font-display text-base font-semibold leading-tight sm:text-xl">{item.name[lang]}</span>
     </div>
   );
 }
