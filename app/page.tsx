@@ -87,20 +87,20 @@ export default async function HomePage() {
       </section>
 
       {/* Machinery (light) */}
-      <section className="bg-mist py-8 sm:py-20">
+      <section className="bg-mist py-8 sm:py-14">
         <Container>
           <SectionHeading number="04" eyebrow={t.machinery.eyebrow} title={t.machinery.title} intro={t.machinery.intro} />
-          <ul className="mt-6 grid gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
-            {machinery.map((m, i) => (<li key={m.slug}><Reveal className="h-full"><MachineryCard machine={m} lang={lang} index={i} /></Reveal></li>))}
+          <ul className="mt-6 grid grid-cols-1 gap-2 sm:mt-8 sm:grid-cols-2 sm:gap-2.5 lg:grid-cols-3 xl:grid-cols-4">
+            {machinery.map((m, i) => (<li key={m.slug}><MachineryCard machine={m} lang={lang} index={i} /></li>))}
           </ul>
         </Container>
       </section>
 
       {/* Industries (dark) */}
-      <section className="bg-ink py-8 text-white sm:py-20">
+      <section className="bg-ink py-8 text-white sm:py-14">
         <Container>
           <SectionHeading dark number="05" eyebrow={t.industries.eyebrow} title={t.industries.title} intro={t.industries.intro} />
-          <ul className="mt-6 grid gap-2 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+          <ul className="mt-6 grid grid-cols-2 gap-2 sm:mt-8 sm:grid-cols-3 sm:gap-2.5 lg:grid-cols-4">
             {projectTypes.map((p) => (<li key={p.slug}><IndustryCard item={p} lang={lang} /></li>))}
           </ul>
         </Container>

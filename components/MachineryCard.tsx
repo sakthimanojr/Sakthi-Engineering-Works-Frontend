@@ -4,11 +4,17 @@ import type { Lang } from "@/types";
 
 export default function MachineryCard({ machine, lang, index }: { machine: Machine; lang: Lang; index: number }) {
   return (
-    <article className="relative h-full border border-steel/20 bg-white p-4 transition-shadow hover:shadow-lg sm:p-6">
-      <span aria-hidden className="absolute right-4 top-3 font-display text-3xl font-bold text-steel/15">{String(index + 1).padStart(2, "0")}</span>
-      <Icon name={machine.icon} size={32} className="text-accent-deep" />
-      <h3 className="mt-4 font-display text-base font-bold text-ink sm:text-xl">{machine.name[lang]}</h3>
-      <p className="mt-2 text-steel">{machine.note[lang]}</p>
+    <article className="group relative flex items-center gap-3 border border-steel/15 bg-white p-2.5 transition-all hover:border-accent hover:shadow-xs sm:p-3">
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-mist text-accent-deep transition-colors group-hover:bg-accent group-hover:text-ink">
+        <Icon name={machine.icon} size={16} />
+      </span>
+      <div className="min-w-0 flex-1">
+        <div className="flex items-center justify-between gap-1">
+          <h3 className="truncate font-display text-xs font-bold text-ink sm:text-sm">{machine.name[lang]}</h3>
+          <span aria-hidden className="shrink-0 font-display text-[10px] font-bold text-steel/30">{String(index + 1).padStart(2, "0")}</span>
+        </div>
+        <p className="truncate text-[11px] text-steel">{machine.note[lang]}</p>
+      </div>
     </article>
   );
 }
