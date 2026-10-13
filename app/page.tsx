@@ -6,18 +6,15 @@ import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import ButtonLink from "@/components/ButtonLink";
-import FeaturedService from "@/components/FeaturedService";
 import ServiceGrid from "@/components/ServiceGrid";
 import MachineryCard from "@/components/MachineryCard";
 import IndustryCard from "@/components/IndustryCard";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import QuickEnquiryForm from "@/components/QuickEnquiryForm";
 import { OfficeCard, FactoryCard } from "@/components/LocationCard";
-import { services } from "@/data/services";
 import { machinery, projectTypes } from "@/data/machinery";
 import { getI18n } from "@/i18n";
 import { pageMetadata } from "@/lib/seo";
-import { getServiceCovers } from "@/lib/covers";
 
 export const metadata: Metadata = pageMetadata({
   title: "Steel Fabrication Company in Walajapet, Ranipet | Sakthi Engineering Works",
@@ -27,9 +24,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default async function HomePage() {
   const { t, lang } = await getI18n();
-  const featured = services.filter((s) => s.featured);
   const capIcons = ["01", "02", "03", "04"];
-  const covers = await getServiceCovers();
 
   return (
     <>
@@ -66,13 +61,10 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {/* Services — featured + full grid */}
+      {/* Services — full grid */}
       <section className="bg-mist py-8 sm:py-20">
         <Container>
           <SectionHeading number="02" eyebrow={t.services.eyebrow} title={t.services.title} intro={t.services.intro} />
-          <ul className="mt-6 grid gap-3 sm:mt-8 sm:gap-6 lg:grid-cols-3">
-            {featured.map((s) => (<li key={s.slug}><Reveal className="h-full"><FeaturedService service={s} lang={lang} cta={t.cta.viewDetails} coverUrl={covers.get(s.slug)?.url} /></Reveal></li>))}
-          </ul>
           <div className="mt-6 sm:mt-10"><ServiceGrid lang={lang} cta={t.cta.viewDetails} /></div>
         </Container>
       </section>

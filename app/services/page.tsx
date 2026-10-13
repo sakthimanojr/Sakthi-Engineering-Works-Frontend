@@ -11,8 +11,8 @@ import { getGalleryItems } from "@/lib/gallery";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Fabrication Services – Sheds, PEB, Sheet Bending, Gates & More",
-  description: "Fourteen fabrication services from Sakthi Engineering Works, Walajapet: sheet bending and shearing, structural sheds and roofing, PEB buildings, gates, grills, staircases, rolling shutters, container bodies and stainless steel works.",
+  title: "Fabrication Services – Sheds, PEB, Sheet Bending, Gates, Grills & More",
+  description: "Twelve fabrication services from Sakthi Engineering Works, Walajapet: sheet bending and shearing, structural sheds and roofing, PEB buildings, gates, grills and collapsible gates, staircases, rolling shutters, container bodies and stainless steel works.",
   path: "/services",
 });
 

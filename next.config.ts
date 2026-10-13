@@ -19,6 +19,19 @@ const nextConfig: NextConfig = {
       { source: "/images/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=3600, must-revalidate" }] },
     ];
   },
+  async redirects() {
+    return [
+      { source: "/services/grills-safety-grills", destination: "/services/gates-grills", permanent: true },
+      { source: "/services/gates", destination: "/services/gates-grills", permanent: true },
+      { source: "/services/collapsible-gates", destination: "/services/gates-grills", permanent: true },
+    ];
+  },
+  webpack(config, { dev }) {
+    if (dev) {
+      config.cache = false;
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

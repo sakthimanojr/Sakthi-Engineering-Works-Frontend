@@ -4,6 +4,8 @@ export interface ServiceCover {
   slug: string;
   url: string;
   alt: string;
+  title?: string;
+  description?: string;
 }
 
 /**

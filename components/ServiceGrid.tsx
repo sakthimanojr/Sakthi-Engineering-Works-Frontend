@@ -13,7 +13,7 @@ export default async function ServiceGrid({ lang, cta, list = services }: { lang
         return (
           <li key={s.slug}>
             <Reveal delay={(i % 3) * 80} className="h-full">
-              <ServiceCard service={s} lang={lang} cta={cta} coverUrl={cover?.url} />
+              <ServiceCard service={s} lang={lang} cta={cta} coverUrl={cover?.url} coverTitle={cover?.title} coverDesc={cover?.description} />
             </Reveal>
           </li>
         );

@@ -27,12 +27,12 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const s = getService(slug);
   if (!s) return {};
   const covers = await getServiceCovers();
-  const coverUrl = covers.get(s.slug)?.url;
+  const cover = covers.get(s.slug);
   return pageMetadata({
-    title: `${s.title.en} in Walajapet, Ranipet – Sakthi Engineering Works`,
-    description: `${s.short.en} Fabricated by Sakthi Engineering Works, Walajapet, Ranipet, Tamil Nadu. Service across India.`,
+    title: cover?.title ? `${cover.title} in Walajapet, Ranipet – Sakthi Engineering Works` : `${s.title.en} in Walajapet, Ranipet – Sakthi Engineering Works`,
+    description: cover?.description ? `${cover.description} Fabricated by Sakthi Engineering Works, Walajapet, Ranipet, Tamil Nadu. Service across India.` : `${s.short.en} Fabricated by Sakthi Engineering Works, Walajapet, Ranipet, Tamil Nadu. Service across India.`,
     path: `/services/${s.slug}`,
-    image: coverUrl || s.image,
+    image: cover?.url || s.image,
   });
 }
 
@@ -41,6 +41,7 @@ const galleryMap: Record<string, string[]> = {
   "sheet-bending-shearing": ["machinery", "fabrication-process"],
   "structural-sheds-roofing": ["structural-sheds", "roofing"],
   "peb-buildings": ["peb"],
+  "gates-grills": ["gates-grills", "gates", "grills"],
   "grills-safety-grills": ["grills"],
   gates: ["gates"],
   "collapsible-gates": ["gates"],
@@ -61,8 +62,11 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
   const { t, lang } = await getI18n();
   const cats = galleryMap[service.slug] ?? [];
   const [allGallery, covers] = await Promise.all([getGalleryItems(), getServiceCovers()]);
-  const coverUrl = covers.get(service.slug)?.url;
-  const coverAlt = covers.get(service.slug)?.alt;
+  const cover = covers.get(service.slug);
+  const coverUrl = cover?.url;
+  const coverAlt = cover?.alt;
+  const coverTitle = cover?.title;
+  const coverDesc = cover?.description;
   const matched = allGallery.filter((g) => cats.includes(g.category));
   const photos = matched.length > 0
     ? matched
@@ -73,9 +77,13 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
   return (
     <>
       <PageHero
-        title={service.title[lang]} eyebrow={`${service.number} — ${t.nav.services}`} intro={service.short[lang]}
-        crumbs={[{ name: t.nav.home, path: "/" }, { name: t.nav.services, path: "/services" }, { name: service.title[lang], path }]}
-        crumbLabel={t.breadcrumbs.label} image={coverUrl || service.image} imageAlt={coverAlt || `${service.title.en} ${t.services.heroAltSuffix}`}
+        title={coverTitle || service.title[lang]}
+        eyebrow={`${service.number} — ${t.nav.services}`}
+        intro={coverDesc || service.short[lang]}
+        crumbs={[{ name: t.nav.home, path: "/" }, { name: t.nav.services, path: "/services" }, { name: coverTitle || service.title[lang], path }]}
+        crumbLabel={t.breadcrumbs.label}
+        image={coverUrl || service.image}
+        imageAlt={coverAlt || `${coverTitle || service.title.en} ${t.services.heroAltSuffix}`}
       />
       <section className="bg-white py-10 sm:py-20">
         <Container className="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:gap-12">

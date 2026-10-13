@@ -102,66 +102,35 @@ export const services: Service[] = [
     featured: true,
   },
   {
-    slug: "grills-safety-grills",
+    slug: "gates-grills",
     number: "04",
-    title: l("Grills & Safety Grills", "கிரில்கள் & பாதுகாப்பு கிரில்கள்"),
-    short: l("Window, balcony, safety and decorative MS grills, made to your design.", "ஜன்னல், பால்கனி, பாதுகாப்பு மற்றும் அலங்கார எம்.எஸ் கிரில்கள் — உங்கள் வடிவமைப்புக்கேற்ப."),
+    title: l("Gates, Grills & Collapsible Gates", "கேட்கள், கிரில்கள் & மடக்கு கேட்கள்"),
+    short: l(
+      "MS main gates, sliding and swing gates, collapsible security gates, and safety & window grills made to custom design and size.",
+      "எம்.எஸ் பிரதான கேட்கள், ஸ்லைடிங் & ஸ்விங் கேட்கள், மடக்கு கேட்கள் மற்றும் ஜன்னல்/பாதுகாப்பு கிரில்கள் — அளவு மற்றும் வடிவமைப்புக்கேற்ப."
+    ),
     description: l(
-      "From plain safety grills to decorative designs, we fabricate MS grills for homes, shops and buildings as per your design and measurements.",
-      "எளிய பாதுகாப்பு கிரில்கள் முதல் அலங்கார வடிவமைப்புகள் வரை, வீடுகள், கடைகள் மற்றும் கட்டிடங்களுக்கான எம்.எஸ் கிரில்களை உங்கள் வடிவமைப்பு மற்றும் அளவுகளுக்கேற்ப உருவாக்குகிறோம்."
+      "We fabricate all types of gates and grills for residential, commercial and industrial premises. This includes MS main entrance gates, sliding and swing gates, heavy-duty collapsible gates for shop fronts and security, as well as decorative and safety grills for windows and balconies.",
+      "குடியிருப்புகள், வணிக வளாகங்கள் மற்றும் தொழிற்சாலைகளுக்கான அனைத்து வகையான கேட் மற்றும் கிரில் வேலைகளையும் மேற்கொள்கிறோம். இதில் எம்.எஸ் பிரதான நுழைவு கேட்கள், ஸ்லைடிங் மற்றும் ஸ்விங் கேட்கள், கடைகளுக்கான பாதுகாப்பு மடக்கு கேட்கள் மற்றும் ஜன்னல், பால்கனி பாதுகாப்பு கிரில்கள் ஆகியவை அடங்கும்."
     ),
     features: [
-      l("Window grills", "ஜன்னல் கிரில்கள்"),
-      l("Balcony grills", "பால்கனி கிரில்கள்"),
-      l("Safety grills", "பாதுகாப்பு கிரில்கள்"),
-      l("MS grills", "எம்.எஸ் கிரில்கள்"),
-      l("Decorative grills", "அலங்கார கிரில்கள்"),
-      l("Custom grill fabrication", "தனிப்பயன் கிரில் ஃபேப்ரிகேஷன்"),
+      l("MS main gates", "எம்.எஸ் பிரதான கேட்கள்"),
+      l("Sliding & swing gates", "ஸ்லைடிங் & ஸ்விங் கேட்கள்"),
+      l("Collapsible security gates", "பாதுகாப்பு மடக்கு கேட்கள்"),
+      l("Window & safety grills", "ஜன்னல் & பாதுகாப்பு கிரில்கள்"),
+      l("Balcony & decorative grills", "பால்கனி & அலங்கார கிரில்கள்"),
+      l("Custom gate & grill fabrication", "தனிப்பயன் கேட் மற்றும் கிரில் ஃபேப்ரிகேஷன்"),
     ],
-    applications: [l("Homes and apartments", "வீடுகள் மற்றும் குடியிருப்புகள்"), l("Shops and offices", "கடைகள் மற்றும் அலுவலகங்கள்"), l("Commercial buildings", "வணிகக் கட்டிடங்கள்")],
-    image: "/images/services/grills-safety-grills.jpg",
-  },
-  {
-    slug: "gates",
-    number: "05",
-    title: l("Gates", "கேட்கள்"),
-    short: l("MS main gates, sliding gates, swing gates and industrial gates in custom designs.", "எம்.எஸ் பிரதான கேட்கள், ஸ்லைடிங் கேட்கள், ஸ்விங் கேட்கள் மற்றும் தொழில்துறை கேட்கள் — தனிப்பயன் வடிவமைப்புகளில்."),
-    description: l(
-      "We fabricate MS gates for residences, commercial premises and industrial sites, including sliding and swing types and custom-designed gates.",
-      "குடியிருப்புகள், வணிக வளாகங்கள் மற்றும் தொழில்துறை தளங்களுக்கான எம்.எஸ் கேட்களை, ஸ்லைடிங் மற்றும் ஸ்விங் வகைகள் மற்றும் தனிப்பயன் வடிவமைப்பு கேட்கள் உட்பட உருவாக்குகிறோம்."
-    ),
-    features: [
-      l("MS gates", "எம்.எஸ் கேட்கள்"),
-      l("Main gates", "பிரதான கேட்கள்"),
-      l("Sliding gates", "ஸ்லைடிங் கேட்கள்"),
-      l("Swing gates", "ஸ்விங் கேட்கள்"),
-      l("Industrial gates", "தொழில்துறை கேட்கள்"),
-      l("Custom-designed gates", "தனிப்பயன் வடிவமைப்பு கேட்கள்"),
+    applications: [
+      l("Residential entrances & homes", "வீடுகள் மற்றும் குடியிருப்பு நுழைவாயில்கள்"),
+      l("Shops & commercial premises", "கடைகள் மற்றும் வணிக வளாகங்கள்"),
+      l("Factories & warehouse entrances", "தொழிற்சாலை மற்றும் கிடங்கு நுழைவாயில்கள்"),
     ],
-    applications: [l("Residential entrances", "குடியிருப்பு நுழைவாயில்கள்"), l("Factory and warehouse entrances", "தொழிற்சாலை மற்றும் கிடங்கு நுழைவாயில்கள்"), l("Commercial premises", "வணிக வளாகங்கள்")],
-    image: "/images/services/gates.jpg",
-  },
-  {
-    slug: "collapsible-gates",
-    number: "06",
-    title: l("Collapsible Gates", "மடக்கு கேட்கள்"),
-    short: l("Security, shop-front and commercial collapsible gates, made to size.", "பாதுகாப்பு, கடை முகப்பு மற்றும் வணிக மடக்கு கேட்கள் — அளவுக்கேற்ப."),
-    description: l(
-      "Collapsible gates for shop fronts, commercial premises and security applications, fabricated to your opening size.",
-      "கடை முகப்புகள், வணிக வளாகங்கள் மற்றும் பாதுகாப்புத் தேவைகளுக்கான மடக்கு கேட்கள், உங்கள் திறப்பு அளவுக்கேற்ப உருவாக்கப்படுகின்றன."
-    ),
-    features: [
-      l("Security gates", "பாதுகாப்பு கேட்கள்"),
-      l("Shop-front gates", "கடை முகப்பு கேட்கள்"),
-      l("Commercial gates", "வணிக கேட்கள்"),
-      l("Custom collapsible gates", "தனிப்பயன் மடக்கு கேட்கள்"),
-    ],
-    applications: [l("Shop fronts", "கடை முகப்புகள்"), l("Commercial premises", "வணிக வளாகங்கள்"), l("Security entrances", "பாதுகாப்பு நுழைவாயில்கள்")],
-    image: "/images/services/collapsible-gates.jpg",
+    image: "/images/services/gates-grills.jpg",
   },
   {
     slug: "staircases",
-    number: "07",
+    number: "05",
     title: l("Staircases", "படிக்கட்டுகள்"),
     short: l("MS, industrial, spiral and straight staircases, platform stairs and handrails.", "எம்.எஸ், தொழில்துறை, சுருள் மற்றும் நேரான படிக்கட்டுகள், பிளாட்ஃபார்ம் படிகள் மற்றும் கைப்பிடிகள்."),
     description: l(
@@ -181,7 +150,7 @@ export const services: Service[] = [
   },
   {
     slug: "rolling-shutters",
-    number: "08",
+    number: "06",
     title: l("Rolling Shutters", "ரோலிங் ஷட்டர்கள்"),
     short: l("Manual, industrial, shop and heavy-duty rolling shutters, fabricated to order.", "கையால் இயக்கும், தொழில்துறை, கடை மற்றும் கனரக ரோலிங் ஷட்டர்கள் — ஆர்டருக்கேற்ப."),
     description: l(
@@ -200,7 +169,7 @@ export const services: Service[] = [
   },
   {
     slug: "container-body-building",
-    number: "09",
+    number: "07",
     title: l("Container Body Building", "கன்டெய்னர் பாடி கட்டுமானம்"),
     short: l("Container bodies, cargo bodies and commercial vehicle body fabrication.", "கன்டெய்னர் பாடிகள், சரக்கு பாடிகள் மற்றும் வணிக வாகன பாடி ஃபேப்ரிகேஷன்."),
     description: l(
@@ -219,7 +188,7 @@ export const services: Service[] = [
   },
   {
     slug: "building-elevation",
-    number: "10",
+    number: "08",
     title: l("Building Elevation", "கட்டிட முகப்பு அமைப்புகள்"),
     short: l("Architectural steel elevation, facade and entrance structures, and modern elevation works.", "கட்டடக்கலை ஸ்டீல் முகப்பு, முகப்பு மற்றும் நுழைவு அமைப்புகள் மற்றும் நவீன முகப்புப் பணிகள்."),
     description: l(
@@ -238,7 +207,7 @@ export const services: Service[] = [
   },
   {
     slug: "sand-tails-sheds-houses",
-    number: "11",
+    number: "09",
     title: l("Sand Tails Sheds & Houses", "Sand Tails ஷெட்கள் & வீடுகள்"),
     short: l("Sand-tail sheds and houses, agricultural and utility structures and related fabrication works.", "Sand-tail ஷெட்கள் மற்றும் வீடுகள், வேளாண் மற்றும் பயன்பாட்டு அமைப்புகள் மற்றும் தொடர்புடைய ஃபேப்ரிகேஷன் பணிகள்."),
     description: l(
@@ -256,7 +225,7 @@ export const services: Service[] = [
   },
   {
     slug: "expanded-metal-works",
-    number: "12",
+    number: "10",
     title: l("Expanded Metal Works", "எக்ஸ்பாண்டட் மெட்டல் பணிகள்"),
     short: l("Expanded metal screens, mesh panels, partitions, fencing and safety panels.", "எக்ஸ்பாண்டட் மெட்டல் ஸ்கிரீன்கள், மெஷ் பேனல்கள், பார்ட்டிஷன்கள், வேலி மற்றும் பாதுகாப்பு பேனல்கள்."),
     description: l(
@@ -276,7 +245,7 @@ export const services: Service[] = [
   },
   {
     slug: "stainless-steel-works",
-    number: "13",
+    number: "11",
     title: l("Stainless Steel Works", "ஸ்டெயின்லெஸ் ஸ்டீல் பணிகள்"),
     short: l("SS railings, gates, handrails, kitchen works and architectural stainless-steel fabrication.", "எஸ்.எஸ் ரெயிலிங்குகள், கேட்கள், கைப்பிடிகள், சமையலறைப் பணிகள் மற்றும் கட்டடக்கலை ஸ்டெயின்லெஸ் ஸ்டீல் ஃபேப்ரிகேஷன்."),
     description: l(
@@ -296,7 +265,7 @@ export const services: Service[] = [
   },
   {
     slug: "general-fabrication-works",
-    number: "14",
+    number: "12",
     title: l("General Fabrication Works", "பொது ஃபேப்ரிகேஷன் பணிகள்"),
     short: l("Custom fabrication, machine frames, platforms, supports, brackets, structural components and repair jobs.", "தனிப்பயன் ஃபேப்ரிகேஷன், இயந்திர ஃபிரேம்கள், பிளாட்ஃபார்ம்கள், சப்போர்ட்கள், பிராக்கெட்டுகள், கட்டமைப்பு பாகங்கள் மற்றும் பழுதுப் பணிகள்."),
     description: l(

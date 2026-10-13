@@ -12,7 +12,10 @@ async function fromBackend(): Promise<GalleryItem[]> {
     const res = await fetch(`${base}/api/public/gallery`, { next: { revalidate: 60 }, signal: AbortSignal.timeout(3000) });
     if (!res.ok) return [];
     const data = (await res.json()) as { images?: { url: string; category: string; alt: string }[] };
-    return (data.images ?? []).map((i) => ({ src: i.url, category: i.category, alt: i.alt || undefined, placeholder: false }));
+    return (data.images ?? []).map((i) => {
+      const category = i.category === "gates" || i.category === "grills" ? "gates-grills" : i.category;
+      return { src: i.url, category, alt: i.alt || undefined, placeholder: false };
+    });
   } catch {
     return [];
   }
@@ -28,7 +31,8 @@ async function fromFolder(): Promise<GalleryItem[]> {
     .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
     .sort()
     .map((f) => {
-      const category = f.split("--")[0].toLowerCase();
+      const rawCategory = f.split("--")[0].toLowerCase();
+      const category = rawCategory === "gates" || rawCategory === "grills" ? "gates-grills" : rawCategory;
       return { src: `/images/gallery/${f}`, category: valid.has(category) ? category : "fabrication-process", placeholder: /placeholder/i.test(f) };
     });
 }

@@ -26,7 +26,7 @@ export const en = {
   },
   services: {
     eyebrow: "What We Fabricate", title: "Our Fabrication Services",
-    intro: "Fourteen service categories covering structural steel, sheet work, doors, gates, stairs, bodies and general fabrication.",
+    intro: "Twelve service categories covering structural steel, sheet work, gates, grills, stairs, bodies and general fabrication.",
     featuredEyebrow: "Core Capabilities", featuredTitle: "Sheet Work, Sheds and PEB",
     includedWork: "Included Work", applications: "Applications", related: "Other Services",
     ctaTitle: "Need this fabricated?", ctaText: "Send us your requirement, drawing or site details and our team will get back to you.",
@@ -54,7 +54,7 @@ export const en = {
     items: [
       { title: "Established in 2005", text: "Fabrication and engineering work carried out since 2005." },
       { title: "Own Factory", text: "Fabrication at our factory in Anandhalai, Walajapet." },
-      { title: "Wide Range of Work", text: "Fourteen categories, from structural sheds to stainless-steel works." },
+      { title: "Wide Range of Work", text: "Twelve categories, from structural sheds to stainless-steel works." },
       { title: "Made to Your Requirement", text: "Custom fabrication to your drawing, size and use." },
       { title: "Service Across India", text: "We take up work all over India." },
       { title: "Direct Communication", text: "Talk to our team by phone, WhatsApp or email." },
