@@ -27,7 +27,7 @@ export default async function AboutPage() {
             <p>{t.about.p1}</p><p>{t.about.p2}</p><p>{t.about.p3}</p>
           </div>
           <div className="bracket relative aspect-[4/3] bg-ink">
-            <Image src="/images/factory/factory.jpg" alt={t.facilities.imageAlt} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
+            <Image src="/images/about/about.jpg" alt={t.about.imageAlt} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
           </div>
         </Container>
       </section>
