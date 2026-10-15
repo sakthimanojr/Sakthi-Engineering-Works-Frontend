@@ -26,7 +26,7 @@ export default async function FacilitiesPage() {
       <section className="bg-white py-20">
         <Container className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <SectionHeading eyebrow={t.facilities.eyebrow} title={t.facilities.factoryTitle} />
+            <SectionHeading title={t.facilities.factoryTitle} />
             <p className="mt-5 text-lg leading-relaxed">{t.facilities.factoryText}</p>
           </div>
           <div className="bracket relative aspect-[4/3] bg-ink"><Image src="/images/factory/factory.jpg" alt={t.facilities.imageAlt} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" /></div>

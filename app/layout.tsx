@@ -8,6 +8,7 @@ import { organizationJsonLd } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileActionBar from "@/components/MobileActionBar";
+import WhatsAppFab from "@/components/WhatsAppFab";
 import { I18nProvider } from "@/components/I18nProvider";
 import JsonLd from "@/components/JsonLd";
 
@@ -40,6 +41,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <main id="main" className="overflow-x-clip">{children}</main>
           <Footer />
           <MobileActionBar />
+          <WhatsAppFab />
         </I18nProvider>
         {organizationJsonLd().map((d, i) => (<JsonLd key={i} data={d} />))}
       </body>

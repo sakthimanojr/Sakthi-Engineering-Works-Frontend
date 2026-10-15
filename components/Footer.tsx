@@ -3,7 +3,6 @@ import { getSocials, getMapLinks, site } from "@/data/site";
 import { services } from "@/data/services";
 import { getI18n } from "@/i18n";
 import Container from "@/components/Container";
-import { backendUrl } from "@/lib/backend";
 
 export default async function Footer() {
   const { t, lang } = await getI18n();
@@ -70,19 +69,6 @@ export default async function Footer() {
           <ul className="flex flex-wrap gap-5 items-center">
             <li><Link href="/privacy" className="hover:text-accent">{t.footer.privacy}</Link></li>
             <li><Link href="/terms" className="hover:text-accent">{t.footer.terms}</Link></li>
-            <li>
-              <a
-                href={`${backendUrl() || "https://sakthi-engineering-works-backend.onrender.com"}/admin/login`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs text-mist/60 hover:text-accent border border-white/15 px-2.5 py-1 rounded transition-colors"
-              >
-                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 002-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-                Admin Login
-              </a>
-            </li>
           </ul>
         </Container>
       </div>

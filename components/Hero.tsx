@@ -1,15 +1,14 @@
 import Image from "next/image";
 import ButtonLink from "@/components/ButtonLink";
 import Container from "@/components/Container";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { site } from "@/data/site";
 import { getI18n } from "@/i18n";
 
 export default async function Hero() {
   const { t } = await getI18n();
   return (
-    <section className="relative isolate flex min-h-[85svh] sm:min-h-[100vh] items-center overflow-hidden bg-ink pt-24 pb-12 sm:pt-32 sm:pb-20 text-white">
-      {/* Home screen background video — crystal clear and bright in background */}
+    <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-ink pt-20 pb-12 sm:pt-32 sm:pb-20 text-white">
+      {/* Background video */}
       <video
         autoPlay
         loop
@@ -17,12 +16,13 @@ export default async function Hero() {
         playsInline
         preload="auto"
         poster="/videos/hero-welder-poster.jpg"
-        className="pointer-events-none absolute inset-0 -z-30 h-full w-full object-cover"
+        className="pointer-events-none absolute inset-0 -z-30 h-full w-full object-cover brightness-110"
+        style={{ minHeight: "100%", minWidth: "100%" }}
       >
         <source src="/videos/hero-welder.mp4" type="video/mp4" />
       </video>
 
-      {/* Poster image fallback underneath */}
+      {/* Poster fallback */}
       <Image
         src="/videos/hero-welder-poster.jpg"
         alt={t.hero.imageAlt}
@@ -32,30 +32,42 @@ export default async function Hero() {
         className="-z-40 object-cover"
       />
 
-      {/* Balanced, subtle scrim so video remains bright & vivid while text is perfectly legible */}
+      {/* Left-side scrim for text legibility */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-20 bg-gradient-to-r from-ink/65 via-ink/25 to-transparent sm:from-ink/55 sm:via-ink/20 sm:to-transparent"
+        className="absolute inset-0 -z-20 bg-gradient-to-r from-ink/60 via-ink/20 to-transparent sm:from-ink/50 sm:via-ink/10 sm:to-transparent"
       />
+      {/* Bottom fade on mobile */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-t from-ink/55 via-transparent to-transparent sm:hidden"
+        className="absolute inset-x-0 bottom-0 -z-10 h-1/3 bg-gradient-to-t from-ink/45 to-transparent sm:hidden"
       />
 
       <Container className="relative z-10 w-full">
-        <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-accent drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] sm:gap-2.5 sm:text-sm sm:tracking-[0.2em]">
-          <span aria-hidden className="h-0.5 w-6 bg-accent sm:w-10" />{site.descriptor}
+        {/* Eyebrow tag */}
+        <p className="flex items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-accent drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] sm:text-sm">
+          <span aria-hidden className="h-px w-8 bg-accent sm:w-12" />
+          {site.descriptor}
         </p>
-        <h1 className="mt-2.5 max-w-4xl font-display text-2xl xs:text-3xl font-bold uppercase leading-[1.1] drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)] sm:mt-5 sm:text-6xl lg:text-7xl">
+
+        {/* Main headline */}
+        <h1 className="mt-3 max-w-3xl font-display text-[1.75rem] font-bold uppercase leading-[1.08] tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.9)] sm:mt-6 sm:text-5xl lg:text-7xl">
           {t.hero.title}
         </h1>
-        <p className="mt-2.5 max-w-2xl text-xs sm:text-lg lg:text-xl leading-relaxed text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] sm:mt-6">
+
+        {/* Supporting text */}
+        <p className="mt-3 max-w-md text-sm leading-[1.7] text-white/85 drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] sm:mt-5 sm:max-w-xl sm:text-base lg:text-lg">
           {t.hero.text}
         </p>
-        <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-8 sm:gap-3">
-          <ButtonLink href="/quote">{t.cta.quote}</ButtonLink>
-          <WhatsAppButton label={t.cta.whatsapp} />
-          <ButtonLink href="/services" variant="outline">{t.cta.explore}</ButtonLink>
+
+        {/* CTAs — stacked on mobile, inline on desktop */}
+        <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-4">
+          <ButtonLink href="/quote" variant="primary">
+            {t.cta.quote}
+          </ButtonLink>
+          <ButtonLink href="/services" variant="outline">
+            {t.cta.explore}
+          </ButtonLink>
         </div>
       </Container>
     </section>

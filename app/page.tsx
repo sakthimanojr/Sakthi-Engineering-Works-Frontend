@@ -11,7 +11,6 @@ import MachineryCard from "@/components/MachineryCard";
 import IndustryCard from "@/components/IndustryCard";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import QuickEnquiryForm from "@/components/QuickEnquiryForm";
-import { OfficeCard, FactoryCard } from "@/components/LocationCard";
 import { machinery, projectTypes } from "@/data/machinery";
 import { getI18n } from "@/i18n";
 import { pageMetadata } from "@/lib/seo";
@@ -55,7 +54,7 @@ export default async function HomePage() {
           </Reveal>
           <Reveal delay={100}>
             <div className="bracket relative aspect-[4/3] bg-ink">
-              <Image src="/images/about/about.jpg" alt={t.about.imageAlt} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
+              <Image src="/images/about/about.jpg" alt={t.about.imageAlt} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover brightness-105" />
             </div>
           </Reveal>
         </Container>
@@ -86,13 +85,16 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {/* Machinery (light) */}
+      {/* Machinery teaser — 4 cards only, link to full Facilities page */}
       <section className="bg-mist py-8 sm:py-14">
         <Container>
           <SectionHeading number="04" eyebrow={t.machinery.eyebrow} title={t.machinery.title} intro={t.machinery.intro} />
-          <ul className="mt-6 grid grid-cols-1 gap-2 sm:mt-8 sm:grid-cols-2 sm:gap-2.5 lg:grid-cols-3 xl:grid-cols-4">
-            {machinery.map((m, i) => (<li key={m.slug}><MachineryCard machine={m} lang={lang} index={i} /></li>))}
+          <ul className="mt-6 grid grid-cols-2 gap-2 sm:mt-8 sm:grid-cols-2 sm:gap-2.5 lg:grid-cols-4">
+            {machinery.slice(0, 4).map((m, i) => (<li key={m.slug}><MachineryCard machine={m} lang={lang} index={i} /></li>))}
           </ul>
+          <div className="mt-5 sm:mt-6">
+            <ButtonLink href="/facilities" variant="dark">{t.nav.facilities} →</ButtonLink>
+          </div>
         </Container>
       </section>
 
@@ -130,11 +132,14 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {/* Office + Factory (dark) */}
-      <section className="bg-coal py-8 text-white sm:py-20">
+      {/* Contact CTA strip — directs to contact page instead of duplicating location cards */}
+      <section className="bg-coal py-8 text-white sm:py-14">
         <Container>
           <SectionHeading dark number="08" eyebrow={t.locations.eyebrow} title={t.locations.title} />
-          <div className="mt-6 grid gap-3 md:grid-cols-2 sm:mt-8 sm:gap-6"><OfficeCard /><FactoryCard /></div>
+          <p className="mt-3 text-sm text-mist/80 sm:mt-4 sm:text-base">{t.footer.about}</p>
+          <div className="mt-5 sm:mt-6">
+            <ButtonLink href="/contact">{t.nav.contact} →</ButtonLink>
+          </div>
         </Container>
       </section>
     </>

@@ -38,7 +38,7 @@ export default function GalleryGrid({ items, limit }: { items: GalleryEntry[]; l
         {filtered.map((item, i) => (
           <li key={item.src} className={clsx(!limit && i % 7 === 0 && "col-span-2 lg:col-span-1 lg:row-span-1")}>
             <button type="button" onClick={() => setOpen(i)} aria-label={`${t.gallery.open}: ${altFor(item)}`} className="group relative block aspect-[4/3] w-full overflow-hidden bg-ink">
-              <Image src={item.src} alt={altFor(item)} fill loading="lazy" sizes="(min-width:1024px) 33vw, 50vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image src={item.src} alt={altFor(item)} fill loading="lazy" sizes="(min-width:1024px) 33vw, 50vw" className="object-cover brightness-110 contrast-105 transition-transform duration-500 group-hover:scale-105" />
               <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-3 text-left text-sm font-semibold text-white">{label(item.category)[lang]}</span>
             </button>
           </li>

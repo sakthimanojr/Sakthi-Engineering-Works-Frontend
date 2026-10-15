@@ -16,8 +16,8 @@ export const en = {
   about: {
     eyebrow: "About Us",
     title: "Fabrication Experience Built Since 2005",
-    p1: "Sakthi Engineering Works is a fabrication and engineering company based in Walajapet, Ranipet, Tamil Nadu. Since 2005 we have provided fabrication and structural solutions to customers across India.",
-    p2: "Our office is on Sholinghur Road and our factory is at Anandhalai, both in Walajapet. From the factory we handle structural steel work, sheet bending and shearing, gates, grills, staircases, container bodies, stainless-steel works and custom fabrication.",
+    p1: "Sakthi Engineering Works is a fabrication and engineering company based in Walajapet, Ranipet Dist, Tamil Nadu.",
+    p2: "Since 2005 we have delivered structural steel fabrication, industrial sheds, PEB buildings, sheet bending and shearing, gates, staircases, rolling shutters, container bodies and stainless-steel works to customers across India.",
     p3: "Every job is fabricated to the customer's requirement and drawing. Tell us what you need and our team will discuss the best way to build it.",
     imageAlt: "Sakthi Engineering Works fabrication facility at Walajapet",
     leadership: "Leadership",

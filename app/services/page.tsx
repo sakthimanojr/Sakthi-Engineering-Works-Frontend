@@ -45,11 +45,7 @@ export default async function ServicesPage() {
       <section id="all-works" className="scroll-mt-24 bg-mist py-8 sm:py-20">
         <Container>
           <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4">
-            <SectionHeading number="01" eyebrow={t.gallery.eyebrow} title={t.gallery.title} intro={t.gallery.intro} />
-            <div className="inline-flex items-center gap-2 border border-accent bg-accent px-4 py-2 font-display text-xs font-bold uppercase tracking-wider text-ink shadow-sm sm:px-5 sm:py-2.5 sm:text-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-ink sm:h-2 sm:w-2" />
-              {t.cta.allWorks}
-            </div>
+            <SectionHeading eyebrow={t.gallery.eyebrow} title={t.gallery.title} intro={t.gallery.intro} />
           </div>
           <div className="mt-6 sm:mt-12">
             <GalleryGrid items={gallery} />

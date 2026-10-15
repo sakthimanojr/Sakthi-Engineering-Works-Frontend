@@ -5,7 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export default function PageHero({ title, eyebrow, intro, crumbs, crumbLabel, image, imageAlt }: { title: string; eyebrow?: string; intro?: string; crumbs: { name: string; path: string }[]; crumbLabel?: string; image?: string; imageAlt?: string }) {
   return (
     <section className="relative isolate overflow-hidden bg-ink pb-8 pt-16 text-white sm:pb-20 sm:pt-40">
-      {image && <Image src={image} alt={imageAlt ?? ""} fill priority sizes="100vw" className="-z-20 object-cover opacity-40" />}
+      {image && <Image src={image} alt={imageAlt ?? ""} fill priority sizes="100vw" className="-z-20 object-cover opacity-55 brightness-110" />}
       <div aria-hidden className="grid-bg-dark absolute inset-0 -z-10" />
       <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/70 to-ink/40" />
       <Container>
