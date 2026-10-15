@@ -12,7 +12,7 @@ export default function WhatsAppFab() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className="group fixed bottom-20 left-4 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-2xl transition-transform duration-300 hover:scale-110 active:scale-95 md:bottom-6 md:left-6 md:h-16 md:w-16"
+      className="group fixed z-50 hidden h-16 w-16 items-center justify-center rounded-full shadow-2xl transition-transform duration-300 hover:scale-110 active:scale-95 md:bottom-6 md:left-6 md:flex"
       style={{ backgroundColor: "#25D366" }}
     >
       {/* WhatsApp SVG icon — official brand mark */}

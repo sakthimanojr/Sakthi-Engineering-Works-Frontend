@@ -34,7 +34,7 @@ export default async function FacilitiesPage() {
       </section>
       <section className="bg-mist py-20">
         <Container>
-          <SectionHeading eyebrow={t.machinery.eyebrow} title={t.machinery.title} intro={t.machinery.intro} />
+          <SectionHeading title={t.machinery.title} intro={t.machinery.intro} />
           <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {machinery.map((m, i) => (<li key={m.slug}><Reveal className="h-full"><MachineryCard machine={m} lang={lang} index={i} /></Reveal></li>))}
           </ul>
