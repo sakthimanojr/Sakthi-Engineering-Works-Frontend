@@ -22,7 +22,7 @@ export default async function AboutPage() {
       {/* About text + image */}
       <section className="bg-white py-16 sm:py-20">
         <Container className="grid gap-10 lg:grid-cols-2 lg:gap-14">
-          <div className="space-y-5 text-base leading-relaxed sm:text-lg">
+          <div className="space-y-5 text-justify text-base leading-relaxed sm:text-lg">
             <p>{t.about.p1}</p>
             <p>{t.about.p2}</p>
             <p>{t.about.p3}</p>

@@ -13,7 +13,7 @@ export default function PageHero({ title, eyebrow, intro, crumbs, crumbLabel, im
         {eyebrow && <p className="mt-5 text-xs font-semibold uppercase tracking-[0.15em] text-accent sm:mt-8 sm:text-sm sm:tracking-[0.2em]">{eyebrow}</p>}
         <h1 className="mt-2 max-w-4xl font-display text-xl font-bold leading-tight sm:mt-3 sm:text-5xl lg:text-6xl">{title}</h1>
         {intro && <p className="mt-3 max-w-3xl text-sm leading-relaxed text-mist/85 sm:mt-5 sm:text-lg">{intro}</p>}
-        <div aria-hidden className="measure mt-6 max-w-md text-accent sm:mt-10" />
+
       </Container>
     </section>
   );

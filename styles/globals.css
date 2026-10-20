@@ -34,13 +34,7 @@
   }
   .bracket::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
   .bracket::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
-  /* Measurement line */
-  .measure {
-    height: 10px; background:
-      linear-gradient(90deg, currentColor 1px, transparent 1px) 0 0 / 12px 100%,
-      linear-gradient(currentColor, currentColor) 0 50% / 100% 1px no-repeat;
-    opacity: 0.35;
-  }
+
   .field { @apply w-full rounded-sm border border-steel/30 bg-white px-3.5 py-3 text-base text-ink placeholder:text-steel/60; }
   .field[aria-invalid="true"] { @apply border-red-600; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
