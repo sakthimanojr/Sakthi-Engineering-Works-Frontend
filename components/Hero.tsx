@@ -16,8 +16,7 @@ export default async function Hero() {
         playsInline
         preload="auto"
         poster="/videos/hero-welder-poster.jpg"
-        className="pointer-events-none absolute inset-0 -z-30 h-full w-full object-cover brightness-110"
-        style={{ minHeight: "100%", minWidth: "100%" }}
+        className="pointer-events-none absolute inset-0 -z-30 h-full w-full object-cover object-[75%_center] sm:object-center brightness-110 hero-video-media"
       >
         <source src="/videos/hero-welder.mp4" type="video/mp4" />
       </video>
@@ -29,18 +28,18 @@ export default async function Hero() {
         fill
         priority
         sizes="100vw"
-        className="-z-40 object-cover"
+        className="-z-40 object-cover object-[75%_center] sm:object-center hero-video-media"
       />
 
-      {/* Left-side scrim for text legibility */}
+      {/* Scrim for text legibility */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-20 bg-gradient-to-r from-ink/60 via-ink/20 to-transparent sm:from-ink/50 sm:via-ink/10 sm:to-transparent"
+        className="absolute inset-0 -z-20 bg-gradient-to-r from-ink/75 via-ink/45 to-ink/25 sm:from-ink/60 sm:via-ink/20 sm:to-transparent"
       />
       {/* Bottom fade on mobile */}
       <div
         aria-hidden
-        className="absolute inset-x-0 bottom-0 -z-10 h-1/3 bg-gradient-to-t from-ink/45 to-transparent sm:hidden"
+        className="absolute inset-x-0 bottom-0 -z-10 h-1/3 bg-gradient-to-t from-ink/60 to-transparent sm:hidden"
       />
 
       <Container className="relative z-10 w-full">
@@ -56,7 +55,7 @@ export default async function Hero() {
         </h1>
 
         {/* Supporting text */}
-        <p className="mt-3 max-w-md text-sm leading-[1.7] text-white/85 drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] sm:mt-5 sm:max-w-xl sm:text-base lg:text-lg">
+        <p className="mt-3 max-w-md text-sm leading-[1.7] text-white/85 drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] text-justify sm:mt-5 sm:max-w-xl sm:text-base lg:text-lg">
           {t.hero.text}
         </p>
 

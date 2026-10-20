@@ -7,10 +7,20 @@
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   body { @apply bg-white font-sans text-sm text-steel antialiased sm:text-base; }
   h1, h2, h3, h4 { @apply font-display tracking-tight; }
+  p { text-align: justify; text-justify: inter-word; hyphens: auto; }
   :focus-visible { outline: 3px solid #FF851B; outline-offset: 2px; }
 }
 
 @layer components {
+  /* Hero video responsive framing: center on welder on mobile, center full frame on desktop */
+  .hero-video-media {
+    object-position: 75% center;
+  }
+  @media (min-width: 640px) {
+    .hero-video-media {
+      object-position: center center;
+    }
+  }
   /* Engineering grid backdrop */
   .grid-bg-dark {
     background-image:
